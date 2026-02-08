@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search • Kinotime</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="brand">Kinotime</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="profile.html">Profile</a>
+      <a href="movies.html">Library</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="panel">
+      <h2>OMDb Search</h2>
+      <p class="footer-note">Ratings, posters, trailers, and reviews come from your secured API.</p>
+      <form id="searchForm" class="form" style="margin-top: 18px;">
+        <label>Movie title
+          <input name="title" placeholder="Interstellar" required />
+        </label>
+        <button class="button primary" type="submit">Search</button>
+      </form>
+      <div id="status" class="status" style="margin-top: 16px;">Enter a title to fetch details.</div>
+    </section>
+
+    <section id="omdbResult" style="margin-top: 24px;"></section>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/omdb.js"></script>
+</body>
+</html>

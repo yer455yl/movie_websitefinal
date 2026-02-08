@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register • Kinotime</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="brand">Kinotime</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="profile.html">Profile</a>
+      <a href="movies.html">Library</a>
+      <a href="search.html">Search</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="panel" style="max-width: 520px; margin: 0 auto;">
+      <h2>Create an account</h2>
+      <p class="footer-note">Registration takes less than a minute.</p>
+      <form id="registerForm" class="form" style="margin-top: 18px;">
+        <label>Email
+          <input type="email" name="email" placeholder="you@email.com" required />
+        </label>
+        <label>Password
+          <input type="password" name="password" placeholder="Strong password" required />
+        </label>
+        <button class="button primary" type="submit">Register</button>
+      </form>
+      <div id="status" class="status" style="margin-top: 16px;">We will create your profile instantly.</div>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

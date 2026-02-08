@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kinotime</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="brand">Kinotime</div>
+    <div class="nav-links">
+      <a href="pages/login.html">Login</a>
+      <a href="pages/register.html">Register</a>
+      <a href="pages/profile.html">Profile</a>
+      <a href="pages/movies.html">Library</a>
+      <a href="pages/search.html">Search</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <h1>Your simple hub for a personal movie library.</h1>
+          <p>
+            Build collections, manage your library, pull OMDb ratings, and
+            add your own reviews. Everything is wired to your API.
+          </p>
+          <div class="hero-cta">
+            <a class="button primary" href="pages/register.html">Create Account</a>
+            <a class="button secondary" href="pages/search.html">Find a Movie</a>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Backend Coverage</h2>
+          <div class="grid two" style="margin-top: 16px;">
+            <div class="feature">
+              <h3>Auth + JWT</h3>
+              <p>Register, login, and access protected sections.</p>
+            </div>
+            <div class="feature">
+              <h3>Profile</h3>
+              <p>View and update account details.</p>
+            </div>
+            <div class="feature">
+              <h3>Movies CRUD</h3>
+              <p>Create, edit, and delete your movies.</p>
+            </div>
+            <div class="feature">
+              <h3>OMDb</h3>
+              <p>Ratings, posters, cast, and full metadata.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shelf">
+      <h2>Trending Now</h2>
+      <div class="shelf-row">
+        <div class="poster-card" style="background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=600&q=80');">
+          <div class="poster-meta">
+            <h4>Night Shift</h4>
+            <span>8.3 · Thriller</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?auto=format&fit=crop&w=600&q=80');">
+          <div class="poster-meta">
+            <h4>City Echo</h4>
+            <span>7.9 · Drama</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=600&q=80');">
+          <div class="poster-meta">
+            <h4>Solar Rain</h4>
+            <span>8.1 · Sci-Fi</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80');">
+          <div class="poster-meta">
+            <h4>Hidden Track</h4>
+            <span>7.6 · Action</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shelf">
+      <h2>Curated Lists</h2>
+      <div class="grid two">
+        <div class="panel">
+          <h3>Weekly Pulse</h3>
+          <p class="footer-note">Track the most talked-about titles.</p>
+        </div>
+        <div class="panel">
+          <h3>Personal Notes</h3>
+          <p class="footer-note">Store reviews and ratings next to each film.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 48px;">
+      <div class="panel">
+        <h2>API Coverage</h2>
+        <p class="footer-note">
+          The frontend uses every available route: registration, login, profile,
+          movies CRUD, and OMDb integration. Ratings and reviews live in Search and Library.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

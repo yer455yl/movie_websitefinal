@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library • Kinotime</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="brand">Kinotime</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="profile.html">Profile</a>
+      <a href="search.html">Search</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="shelf">
+      <h2>Featured Collections</h2>
+      <div class="shelf-row">
+        <div class="poster-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZW5hrQM7hrxQbKsMhau7_UFAXj60aA3Z7gGZoWQwmgJpKnWtCN1t4BZ-w4Oo_HGo66po&usqp=CAU');">
+          <div class="poster-meta">
+            <h4>Top Rated</h4>
+            <span>Highest scores</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8k_C_eN0dGblAfYLu3ax0HFT2t7AeDYC_ag&s');">
+          <div class="poster-meta">
+            <h4>Dark Thrillers</h4>
+            <span>Moody stories</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://static01.nyt.com/images/2016/12/23/watching/christmas-movies-watching-slide-U29V/christmas-movies-watching-slide-U29V-videoSixteenByNineJumbo1600-v8.jpg');">
+          <div class="poster-meta">
+            <h4>Classics</h4>
+            <span>Timeless picks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shelf">
+      <h2>Popular Movies</h2>
+      <div class="shelf-row">
+        <div class="poster-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEDJ-FgTc0UdXZioSDQv7YZ_PiVZDRq6sTOA&s');">
+          <div class="poster-meta">
+            <h4>Spider-Man</h4>
+            <span>Action • 2002</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/ru/c/c3/Interstellar_2014.jpg');">
+          <div class="poster-meta">
+            <h4>Interstellar</h4>
+            <span>Sci-Fi • 2014</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjA0N2YyNmYtZDk4Ny00ODE2LThmZWQtNGJiMDk0YzhiNzE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg');">
+          <div class="poster-meta">
+            <h4>Gran Turismo</h4>
+            <span>Sport • 2023</span>
+          </div>
+        </div>
+        <div class="poster-card" style="background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80');">
+          <div class="poster-meta">
+            <h4>Inception</h4>
+            <span>Sci-Fi • 2010</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="split" style="margin-top: 28px;">
+      <div class="panel">
+        <h2>Add a Movie</h2>
+        <p class="footer-note">Store notes and personal ratings.</p>
+        <form id="movieForm" class="form" style="margin-top: 18px;">
+          <label>Title
+            <input type="text" name="title" placeholder="Movie title" required />
+          </label>
+          <label>Year
+            <input type="number" name="year" placeholder="2024" min="1880" max="2100" />
+          </label>
+          <label>Description / note
+            <textarea name="description" placeholder="Why does this movie matter?"></textarea>
+          </label>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="button primary" type="submit">Save</button>
+            <button class="button secondary" type="button" id="cancelEdit" style="display: none;">Cancel</button>
+          </div>
+        </form>
+        <div id="status" class="status" style="margin-top: 16px;">Ready to sync with the API.</div>
+      </div>
+
+      <div class="panel">
+        <h2>Your Library</h2>
+        <p class="footer-note">Edit, rate, and remove saved movies.</p>
+        <div id="movieList" class="movie-list" style="margin-top: 16px;"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/movies.js"></script>
+</body>
+</html>

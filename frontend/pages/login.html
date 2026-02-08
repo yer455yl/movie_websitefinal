@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login • Kinotime</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="brand">Kinotime</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="profile.html">Profile</a>
+      <a href="movies.html">Library</a>
+      <a href="search.html">Search</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="panel" style="max-width: 520px; margin: 0 auto;">
+      <h2>Welcome back</h2>
+      <p class="footer-note">Log in to access your library and OMDb search.</p>
+      <form id="loginForm" class="form" style="margin-top: 18px;">
+        <label>Email
+          <input type="email" name="email" placeholder="you@email.com" required />
+        </label>
+        <label>Password
+          <input type="password" name="password" placeholder="••••••••" required />
+        </label>
+        <button class="button primary" type="submit">Login</button>
+      </form>
+      <div id="status" class="status" style="margin-top: 16px;">Enter your account details.</div>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
